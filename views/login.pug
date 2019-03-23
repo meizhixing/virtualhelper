@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  form(method="post")
+    | 用户名：
+    input(name="name")
+    br
+    | 密码 ：
+    input(name="pwd")
