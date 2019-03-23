@@ -2,9 +2,11 @@ extends layout
 
 block content
   h1= title
-  form(method="post")
-    | 用户名：
-    input(name="name")
-    br
-    | 密码 ：
-    input(name="pwd")
+  form(method="post",action="/users/login")
+    .form-group
+      label Username:
+      input.form-control(name="username", type="text")
+    .form-group
+      label Password:
+      input.form-control(name="password", type="password")
+    input.btn.btn-primary(type="submit", value="Submit")
